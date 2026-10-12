@@ -1,0 +1,30 @@
+{
+  "title": "AI 场景顾问",
+  "slug": "ai-advisor",
+  "description": "聊几分钟你的工作或学习，帮你找到 AI 最值得先用起来的场景，并给你一张可落地的 AI 场景建议卡。",
+  "greeting": "你好，我是 AI 场景顾问。花几分钟聊聊你的工作或学习，我帮你找出 AI 最值得先用起来的地方，结束时送你一张「AI 场景建议卡」。可以从下面任选一个开始，也可以直接说说你最近在忙什么。",
+  "starter_questions": [
+    {
+      "label": "最近有件事特别费时间",
+      "prompt": "我最近有件事特别费时间，想看看 AI 能不能帮上忙。"
+    },
+    {
+      "label": "我还没怎么用过 AI",
+      "prompt": "我还没怎么用过 AI，不知道该从哪儿开始。"
+    },
+    {
+      "label": "想让团队把 AI 用起来",
+      "prompt": "我想让团队把 AI 用起来，但不知道先从哪个场景入手。"
+    }
+  ],
+  "input_placeholder": "说说你最近在忙的事，比如：每周要写很多客户跟进邮件",
+  "engine": "chat",
+  "pricing_mode": "free",
+  "free_rounds": 0,
+  "web_search_enabled": false,
+  "temperature": 0.7,
+  "model": "deepseek-flash",
+  "default_provider": "deepseek",
+  "is_service_page_enabled": 1,
+  "is_api_enabled": 0
+}

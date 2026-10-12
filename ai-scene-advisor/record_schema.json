@@ -1,0 +1,120 @@
+{
+  "version": 1,
+  "scope": "session",
+  "fields": [
+    {
+      "key": "identity",
+      "label": "身份",
+      "type": "single_choice",
+      "show_in_table": true,
+      "description": "访客自己说明的身份。在读学生选「学生」；受雇在职选「职场人士」；自己创业、当老板或带团队的负责人选「创业者或管理者」；都不是选「其他」。访客没说就不记，不要按话题猜。",
+      "options": [
+        {
+          "key": "student",
+          "label": "学生"
+        },
+        {
+          "key": "professional",
+          "label": "职场人士"
+        },
+        {
+          "key": "founder_manager",
+          "label": "创业者或管理者"
+        },
+        {
+          "key": "other",
+          "label": "其他"
+        }
+      ]
+    },
+    {
+      "key": "ai_level",
+      "label": "AI 使用水平",
+      "type": "single_choice",
+      "show_in_table": true,
+      "description": "按访客描述的实际使用情况判断：从没用过 AI 工具选 L0；偶尔试用、不成习惯选 L1；工作或学习中经常、稳定地用选 L2；能自己搭建工作流、智能体或做 AI 开发选 L3。只凭访客明确说的情况判断，不从职业推断。",
+      "options": [
+        {
+          "key": "l0",
+          "label": "L0 没用过"
+        },
+        {
+          "key": "l1",
+          "label": "L1 偶尔用"
+        },
+        {
+          "key": "l2",
+          "label": "L2 经常用"
+        },
+        {
+          "key": "l3",
+          "label": "L3 能搭建或开发"
+        }
+      ]
+    },
+    {
+      "key": "pain_points",
+      "label": "痛点",
+      "type": "multi_choice",
+      "description": "访客明确提到的、希望 AI 帮忙改善的耗时或头疼的事，可多选；提到了但不在列表里的选「其他」，并把原话写进「具体需求」。",
+      "options": [
+        {
+          "key": "writing",
+          "label": "写作文案"
+        },
+        {
+          "key": "meeting_notes",
+          "label": "会议纪要"
+        },
+        {
+          "key": "research",
+          "label": "资料检索整理"
+        },
+        {
+          "key": "data_report",
+          "label": "数据报表"
+        },
+        {
+          "key": "customer_followup",
+          "label": "客户沟通跟进"
+        },
+        {
+          "key": "coding",
+          "label": "编程开发"
+        },
+        {
+          "key": "other",
+          "label": "其他"
+        }
+      ]
+    },
+    {
+      "key": "team_size",
+      "label": "团队人数",
+      "type": "number",
+      "min": 0,
+      "max": 100000,
+      "description": "访客所在团队（或其负责的团队）的总人数，只记访客明确说出的数字。「十几个销售」这类只说明某个岗位人数的不算团队人数；说「十几个人」这类约数时取整数（如 15）。"
+    },
+    {
+      "key": "want_consult",
+      "label": "是否愿意约顾问",
+      "type": "boolean",
+      "description": "访客明确表示愿意约人工顾问进一步沟通记 true；明确表示不需要记 false；没表态不记。"
+    },
+    {
+      "key": "need_detail",
+      "label": "具体需求",
+      "type": "long_text",
+      "required": true,
+      "description": "用一两句话概括访客最想用 AI 解决的具体场景或问题，尽量保留访客原话里的关键细节（做什么、多久一次、卡在哪里）。"
+    },
+    {
+      "key": "contact",
+      "label": "联系方式",
+      "type": "text",
+      "pii": true,
+      "description": "访客愿意约顾问后主动留下的手机号、微信或邮箱，原样记录。访客没说愿意约顾问之前不要索取，访客不愿留就不记。"
+    }
+  ]
+}
